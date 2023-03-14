@@ -1,250 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Raleway:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500&display=swap');
+
 body {
-	margin: 0px;
+    background-color: #141414 !important;
 }
 
-@media screen and (max-width: 400px) {
-	body {
-		background-color: blue;
-	}
+.bg-car {
+    background-image: url("images/image_main.png");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: brightness(45%);
 }
 
-.header ul {
-	background: grey;
-	list-style-type: none;
-	margin: 0px;
-	padding: 0px 10px 0px 10px;
-	overflow: hidden;
+.href-header {
+    color: black;
+    text-decoration: none;
+    font-size: 28px;
 }
 
-.header li {
-	float:right;
-	padding: 10px;
-	line-height: 60px;
+.href-header:hover {
+    color: grey;
 }
 
-.header li a {
-	display: block;
-	color: black;
-	text-align: center;
-	font-size: 25px;
-	font-family: sans-serif;
-	padding: 10px;
-	text-decoration: none;
+.header-font {
+    margin-top: 20px;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+        }
+
+.big-header {
+    color: #B40A1B; 
+    font-size: 150px;
+    font-weight: 700; 
+    line-height: 187.5px;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.header li a:hover {
-	color: white;
+.zavl {
+    padding-top: 90px;
+    color:#B40A1B; 
+    font-size: 150px;
+    font-weight: 900; 
+    line-height: 125%;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.title-text {
-	font-family: Arial, Helvetica, sans-serif;
-	margin: 0px 0px 40px 60px;
+.sc_he {
+    margin-top: 0px;
+/*    padding-bottom: 120px;*/
+    font-size: 40px; 
+    line-height: 48px; 
+    font-weight: 700;
 }
 
-.content-block {
-	/* background: pink; */
-	display: flex;
-	margin-top: 20px;
+.ruby {
+    margin: 10px 12px;
 }
 
-.first-block-left {
-	display: flex;
-	flex-direction: column;
-/*	background: purple;*/
-	width: 45%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.adr_r {
+    font-size: 25px;
+    color:#B40A1B;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
-.first-block-right {
-	width: 55%;
-/*	background: pink;*/
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
+.adr {
+    font-size: 20px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
-.call-me-button {
-	width: 40%;
-	background: grey;
-	padding: 20px;
-	font-size: 30px;
+.main_title {
+    font-size: 64px;
+    padding-top: 120px;
+    font-weight: 500;
+    color: white;
+    letter-spacing: .1em;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
-.call-me-button a {
-	text-decoration: none;
-	color: pink;
+.cars_2 {
+    margin: 130px 10px;
 }
 
-.call-me-button a:hover {
-	color: white;
+.button {
+    height: 80px;
 }
 
-.option-title {
-	margin: 20px;
-	font-size: 50px;
-	font-family: sans-serif;
-	text-align: center;
-}
-
-.allies-content {
-	flex-direction: column;
-	/* background: green; */
-}
-
-.column-producers {
-	display: flex;
-	justify-content: center;
-	gap: 150px;
-	align-items: center;
-}
-
-.about-producers {
-	/* background: green; */
-	width: 400px;
-	height: 400px;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-}
-
-.circle {
-	margin-top: 10%;
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
-	background-image: url("https://ies.unitech-mo.ru/files/upload/tpl/logo.svg?1609842718");
-	background-position: top;
-	background-size: contain;
-	border: 1px solid black;
-}
-
-.class-1 {
-	font-size: 25px;
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	font-weight: 600;
-	margin-top: 5%;
-	margin-bottom: 0;
-}
-
-.class-2 {
-	font-size: 20px;
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	font-weight: 600;
-	margin: 2%;
-}
-
-.portfolio {
-	flex-direction: column;
-	/* background: blue; */
-	padding-top: 20px;
-	padding-bottom: 80px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.photos {
-	/* background: yellow; */
-	margin: 10px;
-	width: 1200px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.photo-from-port {
-	width: 800px;
-}
-
-.reviews {
-	/* background: pink; */
-	flex-direction: column;
-}
-
-.three-reviews {
-	/* background: red; */
-	gap: 150px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.about-review {
-	/* background: green; */
-	width: 400px;
-	height: 500px;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-}
-
-.contacts {
-	/* background: brown; */
-	height: 500px;
-}
-
-
-.info {
-	/* background: red; */
-	width: 50%;
-	height: 100%;
-}
-
-.info p {
-	font-size: 40px;
-	margin: 0;
-	margin-left: 180px;
-}
-
-.where-we-are {
-	padding-left: 250px;
-	/* background: yellow; */
-	width: 50%;
-	height: 100%;
-}
-
-.option-info {
-	flex-direction: row;
-	width: 100%;
-	height: 80%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.end-of {
-	background: grey;
-	height: 200px;
-	justify-content: center;
-	align-items: center;
-	display: flex;
-}
-
-.about {
-	background: orange;
-	height: 100%;
-	width: 20%;
-	display: flex;
-	flex-direction: column;
-}
-
-.about a {
-	font-size: 30px;
-	padding-top: 10px;
-	padding-left: 60px;
-	text-decoration: none;
-	color: black;
-}
-
-.about a:hover {
-	color: white;
-}
-
-.social {
-	width: 45%;
-	background-color: aqua;
-	height: 100%;
+.card_bg_none {
+    background-color: rgba(0, 0, 0, 0) !important;
+    border: none !important;
 }
