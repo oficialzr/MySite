@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Raleway:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 body {
     background-color: #141414 !important;
+    font-family: 'Poppins', sans-serif;
 }
 
 .bg-car {
@@ -94,4 +96,61 @@ body {
 .card_bg_none {
     background-color: rgba(0, 0, 0, 0) !important;
     border: none !important;
+}
+
+.footer-top{
+    background: #1D1C1C;
+    color: white;
+    border-bottom: 1px solid #222222;
+    padding: 60px 30 0;
+}
+.footer-top .footer-info{
+    margin-bottom: 3px;
+}
+.footer-top .footer-info h3{
+    color: #B40A1B;
+    font-size: 26px;
+    margin: 0 0 20px p;
+    padding: 2px 0 2px 0;
+    line-height: 1;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.footer-top .social-links a{
+    width: 30px;
+    height: 30px;
+    background: #222222;
+    display: inline-block;
+    margin-right: 4px;
+    border-radius: 4px;
+    color: white;
+    text-align: center;
+}
+.footer-top .social-links a:hover{
+    background: #B40A1B;
+}
+.footer-top h4{
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 12px;
+}
+.footer-links{
+    margin-bottom: 30px;
+}
+.footer-links ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-links li{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+.footer-links a{
+    color: white;
+    text-decoration: none;
+}
+.footer-links a:hover{
+    color: #B40A1B;
 }
