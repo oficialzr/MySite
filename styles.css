@@ -28,7 +28,6 @@ body {
 }
 
 .header-font {
-    margin-top: 20px;
     color: white;
     font-size: 24px;
     font-weight: 700;
@@ -45,7 +44,7 @@ body {
 }
 
 .zavl {
-    padding-top: 90px;
+    padding-top: 85px;
     color:#B40A1B; 
     font-size: 150px;
     font-weight: 900; 
@@ -76,27 +75,32 @@ body {
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
-.main_title {
+.card_text {
+    color: white;
+    font-size: 22px;
+    padding: 10px 0px;
+    min-width: 90%;
+    letter-spacing: 1px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    position: relative;
+    top: -30px;
+}
+
+.main-title {
     font-size: 64px;
     padding-top: 120px;
+    padding-bottom: 180px;
     font-weight: 500;
     color: white;
     letter-spacing: .1em;
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
-.cars_2 {
-    margin: 130px 10px;
-}
-
 .button {
-    height: 80px;
+    height: 70px;
 }
 
-.card_bg_none {
-    background-color: rgba(0, 0, 0, 0) !important;
-    border: none !important;
-}
+
 
 .footer-top{
     background: #1D1C1C;
