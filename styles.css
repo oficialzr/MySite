@@ -7,6 +7,10 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+section {
+    padding: 120px;
+}
+
 .bg-car {
     background-image: url("images/image_main.png");
     background-size: cover;
@@ -88,7 +92,6 @@ body {
 
 .main-title {
     font-size: 64px;
-    padding-top: 120px;
     padding-bottom: 180px;
     font-weight: 500;
     color: white;
