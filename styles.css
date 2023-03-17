@@ -54,7 +54,7 @@ body {
 
 .sc_he {
     margin-top: 0px;
-/*    padding-bottom: 120px;*/
+    padding-bottom: 145px;
     font-size: 40px; 
     line-height: 48px; 
     font-weight: 700;
@@ -83,7 +83,7 @@ body {
     letter-spacing: 1px;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     position: relative;
-    top: -30px;
+    top: -30px
 }
 
 .main-title {
