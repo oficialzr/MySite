@@ -152,59 +152,80 @@ section {
 
 /* VLAD's CSS */
 
-.footer-top{
-    background: #1D1C1C;
-    color: white;
-    border-bottom: 1px solid #222222;
-    padding: 60px 30 0;
+footer{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #151515;
+    height: auto;
+    width: 100vw;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 40px;
+    color: #fff;
 }
-.footer-top .footer-info{
-    margin-bottom: 3px;
-}
-.footer-top .footer-info h3{
-    color: #B40A1B;
-    font-size: 26px;
-    margin: 0 0 20px p;
-    padding: 2px 0 2px 0;
-    line-height: 1;
-    font-weight: bolder;
-    text-transform: uppercase;
-}
-.footer-top .social-links a{
-    width: 30px;
-    height: 30px;
-    background: #222222;
-    display: inline-block;
-    margin-right: 4px;
-    border-radius: 4px;
-    color: white;
-    text-align: center;
-}
-.footer-top .social-links a:hover{
-    background: #B40A1B;
-}
-.footer-top h4{
-    font-size: 16px;
-    font-weight: 600;
-    padding-bottom: 12px;
-}
-.footer-links{
-    margin-bottom: 30px;
-}
-.footer-links ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.footer-links li{
-    padding: 10px 0;
+.footer-content{
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
-.footer-links a{
-    color: white;
+.footer-content h3{
+    color: #B40A1B;
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+.menu__item {
+    list-style: none;
+}
+.menu__link {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.85s;
     text-decoration: none;
+    font-weight: 300;
 }
-.footer-links a:hover{
+
+.menu__link:hover {
+    color: #B40A1B;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+.socials a i{
+    font-size: 1.5rem;
+    transition: color .4s ease;
+
+}
+.socials a:hover i{
     color: #B40A1B;
 }
