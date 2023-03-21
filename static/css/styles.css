@@ -49,28 +49,38 @@
 
 /* STATIC CSS */
 
-header {
-    background-image: url("static/images/image_main.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
 body {
     background-color: #141414 !important;
     font-family: 'Poppins', sans-serif;
 }
 
 section {
-    padding-top: 140px;
-    padding-bottom: 140px;
     overflow: hidden;
 }
 
-.darkness {
-    background-color: rgba(0, 0, 0, 0.5);
+.pad3 {
+    padding-top: 180px;
+    padding-bottom: 200px;
 }
 
+.darkness {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* PAGE 1 */
+
+
+.page-1 {
+    background-image: url("../images/image_main.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.page-1-over {
+    overflow: hidden;
+}
 
 .href-header {
     color: black;
@@ -152,6 +162,25 @@ section {
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
+/* PAGE 2 */
+
+.page-2 {
+    background-image: url("../images/bg-page-2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.page-2-p {
+    padding-bottom: 40px;
+}
+
+.cards {
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;    
+}
+
 .card_text {
     color: white;
     font-size: 22px;
@@ -165,7 +194,7 @@ section {
 
 .main-title {
     font-size: 64px;
-    padding-bottom: 180px;
+    padding-bottom: 120px;
     font-weight: 500;
     color: white;
     letter-spacing: .1em;
@@ -178,18 +207,29 @@ section {
 
 /* PAGE 3 */
 
+.page-3-bg {
+    background-image: url("../images/bg-page-3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .val-3 {
     padding-right: 60px;
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
-.p3 {
-    margin: 140px 312px;
+.page-3 {
+    background-image: url("../images/bg-page-3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.page-3 {
+.page-3-un {
     display: flex;
+    margin: 0px 200px;
 }
 
 .page-un {
@@ -210,7 +250,6 @@ section {
     background-color: #1D1C1C;
 }
 
-
 .un-golf {
     display: flex;
     justify-content: center;
@@ -220,15 +259,13 @@ section {
     overflow: hidden;
 }
 
-/* .golf-img > img {
-    height: 100%;
-} */
-
 .img-fit {
     pointer-events: none;
-    height: 100%;
-    width: 100%;
+    height: 500px;
+    width: 600px;
     object-fit: cover;
+    overflow: hidden;
+    margin: auto;
 }
 
 .golf-img {
@@ -237,10 +274,26 @@ section {
     align-items: center;
     margin-top: 30px;
     width: 100%;
-    height: 80%
+    height: 500px;
+    overflow: hidden;
+}
+
+.golf-img .item {
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .golf-str {
+    pointer-events: none;
     margin: 10px;
     font-size: 18px;
     text-align: center;
@@ -282,6 +335,11 @@ section {
     margin: 0px 10px;
 }
 
+.un-golf .next, .un-golf .previous {
+    cursor: pointer;
+    
+}
+
 
 /* VLAD's CSS */
 
@@ -291,7 +349,6 @@ footer{
     right: 0;
     background: #151515;
     height: auto;
-    width: 100vw;
     font-family: 'Montserrat', sans-serif;
     padding-top: 40px;
     color: #fff;
