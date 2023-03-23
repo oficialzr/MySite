@@ -37,6 +37,15 @@
     opacity: 1;
 }
 
+._anim-scale-4 {
+    opacity: 0;
+    transition: all 2s ease-in 0s;
+}
+
+._anim-scale-4._active {
+    opacity: 1;
+}
+
 ._anim-text-down._active,
 ._anim-text-up._active,
 ._anim-left._active,
@@ -60,11 +69,17 @@ section {
 
 .pad3 {
     padding-top: 180px;
-    padding-bottom: 200px;
+    padding-bottom: 210px;
 }
 
 .darkness {
     background-color: rgba(0, 0, 0, 0.7);
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* PAGE 1 */
@@ -122,12 +137,6 @@ section {
 .point-none {
     pointer-events: none;
     height: 100%;
-}
-
-.imgs-rows {
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
 }
 
 
@@ -207,11 +216,9 @@ section {
 
 /* PAGE 3 */
 
-.page-3-bg {
-    background-image: url("../images/bg-page-3.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.pad-3 {
+    padding-top: 180px;
+    padding-bottom: 210px;
 }
 
 .val-3 {
@@ -338,6 +345,120 @@ section {
 .un-golf .next, .un-golf .previous {
     cursor: pointer;
     
+}
+
+/* PAGE 4 */
+
+.page-4 {
+    background-image: url("../images/bg-page-4.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.dark-4 {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.pad4 {
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+
+.main-title-4 {
+    padding-bottom: 20px;
+}
+
+.cont-but {
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 60px;
+}
+
+.ruby-4 {
+    margin-bottom: 0px;
+}
+
+.but-4 {
+    font-size: 30px;
+    padding: 15px 40px;
+    border: 0;
+    width: 220px;
+    background: none;
+    transition: background 0.8s ease;
+    animation-name: rev-scale;
+    animation-duration: 1s;
+}
+
+.but-4:hover {
+    animation-name: scale;
+    animation-duration: 1s;
+    background-color: #B40A1B;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rev-scale {
+    from {
+        transform: scale(1.1, 1.1);
+    }
+    to {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes scale {
+    from {
+        transform: scale(1, 1);
+    }
+    to {
+        transform: scale(1.1, 1.1);
+    }
+}
+
+.but-4 > a {
+    position: relative;
+    top: 3px;
+}
+
+.card-4 {
+    border: 2px grey solid;
+    width: 17%;
+    margin: 0px 20px;
+    height: 450px;
+}
+
+.card-4-con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 40px;
+    text-align: center;
+}
+
+.card-4-title {
+    font-size: 24px;
+    text-decoration: none;
+    padding: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.card-4-text {
+    font-size: 16px;
+    text-decoration: none;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.ico-4 {
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.card-4 > a {
+    text-align: center;
 }
 
 
