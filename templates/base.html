@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ZAVL</title>
+    {% block title %}
+    {% endblock %}
     <link rel="stylesheet" href="../static/css/styles.css">
     <!-- <link href="media-queries.css" rel="stylesheet" type="text/css"> -->
 
@@ -18,10 +19,8 @@
 <body>
 
 <main>
-
     {% block main %}
     {% endblock %}
-
 </main>
 
 {% include '_footer.html' %}

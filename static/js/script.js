@@ -165,3 +165,8 @@ function showSlides2(n, turn){
     }, 2100)
 
 }
+
+if (document.title == 'ZAVL'){
+    navbar = document.getElementById('navbar')
+    navbar.classList.add('darkness')
+}

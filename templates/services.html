@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    {% include '_navbar.html' %}
+    {% for service in services %}
+        <a class="text-white">{{ service.title }}</a>
+        <img src="{{service.image}}">
+    {% endfor %}
+{% endblock %}

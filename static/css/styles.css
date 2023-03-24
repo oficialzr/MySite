@@ -102,6 +102,7 @@ section {
     overflow: hidden;
 }
 
+
 .navbar-main{
     display: flex;
     justify-content: center;
@@ -137,7 +138,8 @@ section {
 }
 
 .zavl {
-    padding-top: 75px;
+    padding-top: 100px;
+    text-align: center;
     color:#B40A1B; 
     font-size: 150px;
     font-weight: 900; 
