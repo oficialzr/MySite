@@ -83,6 +83,10 @@ section {
     align-items: center;
 }
 
+.no-point {
+    pointer-events: none;
+}
+
 /* PAGE 1 */
 
 
@@ -98,14 +102,21 @@ section {
     overflow: hidden;
 }
 
-.href-header {
-    color: black;
-    text-decoration: none;
-    font-size: 28px;
+.navbar-main{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px;
 }
 
-.href-header:hover {
-    color: grey;
+.nav-title {
+    background: linear-gradient(#B40A1B 0 0)
+    bottom /var(--b, 0) 3px no-repeat;
+    transition: 0.7s;
+    padding-bottom: 5px;
+}
+
+.nav-title:hover {
+    --b: 95%;
 }
 
 .header-font {
@@ -126,13 +137,19 @@ section {
 }
 
 .zavl {
-    padding-top: 85px;
+    padding-top: 75px;
     color:#B40A1B; 
     font-size: 150px;
     font-weight: 900; 
     line-height: 125%;
     font-family: 'Montserrat', sans-serif;
     overflow: hidden;
+    transition: 1s;
+}
+
+.zavl:hover {
+    cursor: default;
+    transform: scale(1.2, 1.2) rotate(3deg);
 }
 
 .point-none {
@@ -190,17 +207,66 @@ section {
     padding-bottom: 40px;
 }
 
+.page-2-title {
+    padding: 0px;
+}
+
+.cards-main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 .cards {
     display: flex;
     justify-content:space-evenly;
-    align-items: center;    
+    align-items: center;  
+}
+
+.cart-item {
+    width: 20vw;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.cart-item:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.vagburg {
+    width: 100%;
+    height: 65%;
+    background-image: url('../images/car1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    pointer-events: none;
+}
+
+.japdays {
+    width: 100%;
+    height: 65%;
+    background-image: url('../images/car2.png');
+    pointer-events: none;
+}
+
+.tunfest {
+    width: 100%;
+    height: 65%;
+    background-image: url('../images/car3.png');
+    pointer-events: none;
 }
 
 .card_text {
     color: white;
-    font-size: 22px;
+    /* font-size: 22px; */
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 10px);
+
     padding: 10px 0px;
-    min-width: 80%;
+    min-width: 90%;
     letter-spacing: 1px;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     position: relative;
@@ -223,7 +289,7 @@ section {
 /* PAGE 3 */
 
 .pad-3 {
-    padding-top: 180px;
+    padding-top: 200px;
     padding-bottom: 180px;
 }
 
@@ -424,7 +490,7 @@ section {
 
 .pad4 {
     padding-top: 100px;
-    padding-bottom: 130px;
+    padding-bottom: 140px;
 }
 
 .main-title-4 {
