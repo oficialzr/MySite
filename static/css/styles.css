@@ -65,6 +65,7 @@ body {
 
 section {
     overflow: hidden;
+    /* height: 100vh; */
 }
 
 .pad3 {
@@ -173,6 +174,11 @@ section {
 
 /* PAGE 2 */
 
+.pad2 {
+    padding-top: 200px;
+    padding-bottom: 130px;
+}
+
 .page-2 {
     background-image: url("../images/bg-page-2.jpg");
     background-size: cover;
@@ -218,7 +224,7 @@ section {
 
 .pad-3 {
     padding-top: 180px;
-    padding-bottom: 210px;
+    padding-bottom: 180px;
 }
 
 .val-3 {
@@ -241,10 +247,14 @@ section {
 
 .page-un {
     width: 50%;
+    margin-top: -30px ;
 }
 
 .page-un-r {
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .title-3 {
@@ -252,7 +262,7 @@ section {
 }
 
 .iconic {
-    width: 11%;
+    width: 9%;
     margin: 5px;
     background-color: #1D1C1C;
 }
@@ -266,26 +276,77 @@ section {
     overflow: hidden;
 }
 
-.img-fit {
-    pointer-events: none;
+
+.item {
+    position: relative;
+    background-image: url('../images/car-3-1.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.item-animated {
+    animation: slider 2s ease 0.2s 1;
+    position: relative;
+    z-index: 2;
+    width: 500px;
     height: 500px;
-    width: 600px;
-    object-fit: cover;
-    overflow: hidden;
-    margin: auto;
+    background-size: cover;
+    background-position: center;
+}
+
+.item-animated-l {
+    animation: slider-l 2s ease 0.2s 1;
+    position: relative;
+    z-index: 2;
+    width: 500px;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+
+@keyframes slider {
+    from {
+        right: -500px;
+        bottom: 500px;
+    }
+    to {
+        right: 0px;
+        bottom: 500px;
+    }
+}
+
+@keyframes slider-l {
+    from {
+        right: 500px;
+        bottom: 500px;
+    }
+    to {
+        right: 0px;
+        bottom: 500px;
+    }
 }
 
 .golf-img {
-    display: flex;
-    justify-content: center;
     align-items: center;
     margin-top: 30px;
-    width: 100%;
+    width: 500px;
     height: 500px;
     overflow: hidden;
 }
 
 .golf-img .item {
+    animation-name: fade;
+    animation-duration: 2s;
+    width: 500px;
+    height: 500px;
+    display: flex;
+}
+
+.item > img {
+    width: 500px;
+}
+
+.golf-img .item-2 {
     animation-name: fade;
     animation-duration: 2s;
 }
@@ -344,7 +405,8 @@ section {
 
 .un-golf .next, .un-golf .previous {
     cursor: pointer;
-    
+    background: none;
+    border: none;
 }
 
 /* PAGE 4 */
@@ -361,8 +423,8 @@ section {
 }
 
 .pad4 {
-    padding-top: 140px;
-    padding-bottom: 140px;
+    padding-top: 100px;
+    padding-bottom: 130px;
 }
 
 .main-title-4 {
@@ -432,8 +494,9 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 100px 40px;
+    margin: 60px 40px 0px 40px;
     text-align: center;
+    position: relative;
 }
 
 .card-4-title {
@@ -459,6 +522,68 @@ section {
 
 .card-4 > a {
     text-align: center;
+}
+
+.but-about {
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 12px 25px;
+    position: absolute;
+    top: 300px;
+    animation-name: rev-scale;
+    border: none;
+    animation-duration: 1s;
+    transition: all 1s ease;
+    animation-name: rev-scale;
+    animation-fill-mode: forwards;
+    background: linear-gradient(to left, transparent 50%, #B40A1B 50%) right;
+    background-size: 210%;
+}
+
+.but-about:hover {
+    background-position: left;
+    animation-name: scale;
+}
+
+.but-about > a {
+    background-color: none;
+    position: relative;
+    top: 2px;
+}
+
+
+/* PAGE 5 */
+
+.page-5 {
+    background-image: url('../images/bg-page-5.jpg');
+}
+
+.pad5 {
+    padding-top: 200px;
+    padding-bottom: 180px;
+}
+
+.dark-5 {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.golf-img-5 {
+    padding-right: 100px;
+}
+
+.item2 {
+    position: relative;
+    background-image: url('../images/car-5-1.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.golf-img .item2 {
+    animation-name: fade;
+    animation-duration: 2s;
+    width: 500px;
+    height: 500px;
+    display: flex;
 }
 
 

@@ -38,30 +38,130 @@ if (animItems.length > 0){
 }
 
 
-let slideIndex = 1;
-showSlides(slideIndex);
+var slideIndex = 0;
+
+const cars = Array('car-3-1.png', 'car-3-2.jpg', 'car-3-3.jpg')
 
 function nextSlide(){
-    showSlides(slideIndex += 1);
+    showSlides(slideIndex += 1, 'right');
 }
 
 function previousSlide(){
-    showSlides(slideIndex -= 1);
+    showSlides(slideIndex -= 1, 'left');
 }
 
-function showSlides(n){
-    let slides = document.getElementsByClassName("item");
+function showSlides(n, turn){
+    l_button = document.getElementById('previous')
+    r_button = document.getElementById('next')
 
-    if (n > slides.length){
-        slideIndex = 1
+    l_button.disabled = true
+    r_button.disabled = true
+
+
+    first = document.getElementById('first')
+    second = document.getElementById('second')
+    
+    if (n > cars.length - 1){
+        slideIndex = 0
     }
-    if (n < 1){
-        slideIndex = slides.length
+    if (n < 0){
+        slideIndex = cars.length - 1
     }
 
-    for (let slide of slides){
-        slide.style.display = "none";
+    if (turn == 'right'){
+        second.style.backgroundImage = `url("../static/images/${cars[slideIndex]}")`
+        second.classList.add('item-animated')
+        second.classList.remove('item')
+
+        
+        function slidePrev() {
+            first.style.backgroundImage = second.style.backgroundImage
+            second.classList.add('item')
+            second.classList.remove('item-animated')
+    }
+    }
+    else{
+        second.style.backgroundImage = `url("../static/images/${cars[slideIndex]}")`
+        second.classList.add('item-animated-l')
+        second.classList.remove('item')
+
+        
+        function slidePrev() {
+            first.style.backgroundImage = second.style.backgroundImage
+            second.classList.add('item')
+            second.classList.remove('item-animated-l')
+        }
     }
 
-    slides[slideIndex - 1].style.display = "block"
+    setTimeout(() => {
+        slidePrev();
+        l_button.disabled = false;
+        r_button.disabled = false;
+    }, 2100)
+
+}
+
+
+
+var slideIndex2 = 0;
+
+const cars2 = Array('car-5-1.png', 'car-5-2.jpg', 'car-5-3.jpg')
+
+function nextSlide2(){
+    showSlides2(slideIndex2 += 1, 'right');
+}
+
+function previousSlide2(){
+    showSlides2(slideIndex2 -= 1, 'left');
+}
+
+function showSlides2(n, turn){
+    l_button = document.getElementById('previous2')
+    r_button = document.getElementById('next2')
+
+    l_button.disabled = true
+    r_button.disabled = true
+
+
+    first = document.getElementById('first2')
+    second = document.getElementById('second2')
+    
+    if (n > cars2.length - 1){
+        slideIndex2 = 0
+    }
+    if (n < 0){
+        slideIndex2 = cars2.length - 1
+    }
+
+    if (turn == 'right'){
+        second.style.backgroundImage = `url("../static/images/${cars2[slideIndex2]}")`
+        second.classList.add('item-animated')
+        second.classList.remove('item2')
+
+        
+        function slidePrev() {
+            first.style.backgroundImage = second.style.backgroundImage
+            second.classList.add('item2')
+            second.classList.remove('item-animated')
+    }
+    }
+    else{   
+        second.style.backgroundImage = `url("../static/images/${cars2[slideIndex2]}")`
+        second.classList.add('item-animated-l')
+        second.classList.remove('item2')
+
+        
+        function slidePrev() {
+            first.style.backgroundImage = second.style.backgroundImage
+            second.classList.add('item2')
+            second.classList.remove('item-animated-l')
+        }
+    }
+
+    setTimeout(() => {
+        slidePrev();
+        l_button.disabled = false;
+        r_button.disabled = false;
+    }, 2100)
+
 }
