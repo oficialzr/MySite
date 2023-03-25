@@ -195,7 +195,7 @@ section {
 
 .pad2 {
     padding-top: 200px;
-    padding-bottom: 130px;
+    padding-bottom: 160px;
 }
 
 .page-2 {
@@ -217,6 +217,7 @@ section {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .cards {
@@ -226,8 +227,8 @@ section {
 }
 
 .cart-item {
-    width: 20vw;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -239,34 +240,30 @@ section {
     transform: scale(1.1, 1.1);
 }
 
-.vagburg {
-    width: 100%;
-    height: 65%;
-    background-image: url('../images/car1.png');
-    background-repeat: no-repeat;
+.car {
     background-size: cover;
+    background-position: center;
     pointer-events: none;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 100%;
+}
+
+.vagburg {
+    background-image: url('../images/car1.png');
 }
 
 .japdays {
-    width: 100%;
-    height: 65%;
     background-image: url('../images/car2.png');
-    pointer-events: none;
 }
 
 .tunfest {
-    width: 100%;
-    height: 65%;
     background-image: url('../images/car3.png');
-    pointer-events: none;
 }
 
 .card_text {
     color: white;
-    /* font-size: 22px; */
-    font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 10px);
-
+    font-size: 1.3em;
     padding: 10px 0px;
     min-width: 90%;
     letter-spacing: 1px;
@@ -292,7 +289,7 @@ section {
 
 .pad-3 {
     padding-top: 200px;
-    padding-bottom: 180px;
+    padding-bottom: 160px;
 }
 
 .val-3 {
@@ -492,7 +489,7 @@ section {
 
 .pad4 {
     padding-top: 100px;
-    padding-bottom: 140px;
+    padding-bottom: 130px;
 }
 
 .main-title-4 {
@@ -675,6 +672,7 @@ section {
 .service {
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
 
 .col-serv {

@@ -180,10 +180,11 @@ if (document.title == 'ZAVL'){
 // SERVICES IMAGES
 
 function proportionImages(){
-    images = document.getElementsByClassName('serv-img')
+    images = document.getElementsByClassName('serv-img');
+        size = '60%';
 
     for (let image of images){
-        image.style.width = '60%'
+        image.style.width = size
         pixels = image.clientWidth + 'px'
         image.style.height = pixels
     }
