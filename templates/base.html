@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    {% block title %}
-    {% endblock %}
+    <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="../static/css/styles.css">
     <!-- <link href="media-queries.css" rel="stylesheet" type="text/css"> -->
 
@@ -16,12 +15,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
-<body>
 
-<main>
-    {% block main %}
-    {% endblock %}
-</main>
+<body {% block body %}{% endblock %}>
+    <main>
+        {% block main %}
+        {% endblock %}
+    </main>
+
 
 {% include '_footer.html' %}
     <!-- Boostrap scripts -->

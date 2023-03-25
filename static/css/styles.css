@@ -59,7 +59,7 @@
 /* STATIC CSS */
 
 body {
-    background-color: #141414 !important;
+    background-color: #141414;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -654,6 +654,63 @@ section {
     display: flex;
 }
 
+
+/* SERVICES CSS */
+
+.services-body {
+    background: rgba(0, 0, 0, 0.7) url('../images/bg-services.png');
+    background-blend-mode: darken;
+    background-size: 80px;
+    animation: bgRel linear 5s infinite;
+}
+
+@keyframes bgRel {
+    from {
+        background-position: 0px 0px;
+    } to {
+        background-position: 80px 77px;
+    }
+}
+
+.service {
+    display: flex;
+    justify-content: center;
+}
+
+.col-serv {
+    width: 45%;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.col-text {
+    margin-left: 50px;
+}
+
+.col-serv > p {
+    padding-top: 20px;
+    padding-inline: 15%;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.col-serv > h3 {
+    padding-top: 30px;
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+}
+
+.serv-img {
+    background-position: center;
+    background-size: cover;
+}
 
 /* VLAD's CSS */
 

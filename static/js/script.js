@@ -1,4 +1,6 @@
 
+// ANIMATIONS
+
 const animItems = document.querySelectorAll('._anim-items');
 
 if (animItems.length > 0){
@@ -37,6 +39,8 @@ if (animItems.length > 0){
     }, 300);
 }
 
+
+// SLIDERS
 
 var slideIndex = 0;
 
@@ -166,7 +170,39 @@ function showSlides2(n, turn){
 
 }
 
+// NAVBAR DARKNESS ON THE MAIN PAGE
+
 if (document.title == 'ZAVL'){
     navbar = document.getElementById('navbar')
     navbar.classList.add('darkness')
 }
+
+// SERVICES IMAGES
+
+function proportionImages(){
+    images = document.getElementsByClassName('serv-img')
+
+    for (let image of images){
+        image.style.width = '60%'
+        pixels = image.clientWidth + 'px'
+        image.style.height = pixels
+    }
+}
+
+function imagesServ(){
+    images = document.getElementsByClassName('serv-img')
+    for (let image of images){
+        id = image.id
+        image.setAttribute('style', `background-image: url("${id}")`)
+    }
+
+}
+
+
+window.addEventListener('resize', function(event) {
+    proportionImages()
+}, true);
+
+
+imagesServ()
+proportionImages()

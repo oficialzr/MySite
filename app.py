@@ -1,18 +1,20 @@
 from flask import Flask, render_template, request, flash
-from flaskext.mysql import MySQL
-from pymysql.cursors import DictCursor
+from flask_sqlalchemy import SQLAlchemy
 
 
 app = Flask(__name__)
 
-
-
 # DB SETTINGS
-mysql = MySQL(cursorclass=DictCursor)
-app.config['MYSQL_DATABASE_USER'] = 'root'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'cuka009TV'
-app.config['MYSQL_DATABASE_DB'] = 'zavl'
-mysql.init_app(app)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///zavl.db'
+
+db = SQLAlchemy(app)
+
+class Services(db.Model):
+    service_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    title = db.Column(db.String(100), unique=True)
+    text = db.Column(db.String(1000), nullable=True)
+    image = db.Column(db.String(200), nullable=True)
+
 
 
 @app.route('/')
@@ -21,15 +23,8 @@ def index():
 
 @app.route('/services')
 def services():
-    conn = mysql.connect()
-    cursor = conn.cursor()
-
-    serv = cursor.execute('SELECT * FROM services')
-    cursor.connection.commit()
-    if serv > 0:
-        services = cursor.fetchall()
-        print(services)
-        return render_template('services.html', services=services)
+    services = Services.query.all()
+    return render_template('services.html', services=services)
 
 
 if __name__ == '__main__':
