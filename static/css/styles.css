@@ -91,6 +91,105 @@ section {
     flex-wrap: wrap;
 }
 
+.modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 2;
+    transition: opacity 2s ease-in;
+    display: none;
+    pointer-events: none;
+}
+
+.modalDialog:target {
+    display: block;
+    pointer-events: auto;
+    animation: modal-opacity 1s linear 1;
+}
+
+@keyframes modal-opacity {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+.modalDialog > div {
+    width: 600px;
+    position: relative;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 20px;
+    background: #101010;
+    color: white;
+    font-family: 'Montserrat';
+}
+
+.close {
+        background: #606061;
+        line-height: 25px;
+        position: absolute;
+        right: -10px;
+        text-align: center;
+        color: white;
+        top: -10px;
+        width: 24px;
+        text-decoration: none;
+        /* font-weight: bold; */
+        border-radius: 12px;
+}
+
+.close:hover {
+    background: #BA2231;
+}
+
+.call-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.call-submit {
+    align-self: center;
+    padding: 10px 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    transition: 1s ease;
+    background-color: #000;
+    color: white;
+    font-size: 22px;
+    border-radius: 5px;
+}
+
+.call-submit:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.call-text {
+    color:#B40A1B;
+    font-size: 26px;
+    text-align: start;
+    margin-left: 30px    
+}
+
+.input-call {
+    margin: 20px 30px;
+    background-color: #000;
+    border: none;
+    padding: 10px 0px;
+    padding-left: 10px;
+    color: white;
+    font-size: 24px
+}
+
+    
+
+
 /* PAGE 1 */
 
 

@@ -19,6 +19,25 @@
 </head>
 
 <body {% block body %}{% endblock %}>
+ 
+    <div id="openModal" class="modalDialog">
+        <div>
+            <a href="#close" title="Закрыть" class="close">X</a>
+            <h1 style="text-align: center; color: #B40A1B; font-weight: 600; padding-top: 20px; padding-bottom: 60px;">ZAVL<br>перезвонит!</h1>
+            <form class="call-form">
+                <div class="call-text">
+                    Как вас зовут?
+                </div>
+                <input class="input-call" type="text" placeholder="Введите ваше имя">
+                <div class="call-text">
+                    Куда нам позвонить?
+                </div>
+                <input class="input-call" type="text" placeholder="Введите ваш номер телефона">
+                <button class="call-submit" type="submit">Отправить!</button>
+            </form>
+        </div>
+    </div>
+
     <main>
         {% block main %}
         {% endblock %}
