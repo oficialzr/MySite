@@ -87,6 +87,10 @@ section {
     pointer-events: none;
 }
 
+.wrapped {
+    flex-wrap: wrap;
+}
+
 /* PAGE 1 */
 
 
@@ -307,16 +311,17 @@ section {
 
 .page-3-un {
     display: flex;
-    margin: 0px 200px;
+    justify-content: space-evenly;
+    margin: 0px 100px;
+    flex-wrap: wrap;
 }
 
 .page-un {
-    width: 50%;
-    margin-top: -30px ;
+    width: 500px
 }
 
 .page-un-r {
-    width: 50%;
+    width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -327,9 +332,13 @@ section {
 }
 
 .iconic {
-    width: 9%;
+    width: 15%;
+    height: 56px;
     margin: 5px;
-    background-color: #1D1C1C;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .un-golf {
@@ -353,8 +362,8 @@ section {
     animation: slider 2s ease 0.2s 1;
     position: relative;
     z-index: 2;
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
 }
@@ -363,31 +372,31 @@ section {
     animation: slider-l 2s ease 0.2s 1;
     position: relative;
     z-index: 2;
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
 }
 
 @keyframes slider {
     from {
-        right: -500px;
-        bottom: 500px;
+        right: -100%;
+        bottom: 100%;
     }
     to {
-        right: 0px;
-        bottom: 500px;
+        right: 0%;
+        bottom: 100%;
     }
 }
 
 @keyframes slider-l {
     from {
-        right: 500px;
-        bottom: 500px;
+        right: 100%;
+        bottom: 100%;
     }
     to {
-        right: 0px;
-        bottom: 500px;
+        right: 0%;
+        bottom: 100%;
     }
 }
 
@@ -402,8 +411,8 @@ section {
 .golf-img .item {
     animation-name: fade;
     animation-duration: 2s;
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    height: 100%;
     display: flex;
 }
 
@@ -428,7 +437,7 @@ section {
 .golf-str {
     pointer-events: none;
     margin: 10px;
-    font-size: 18px;
+    font-size: 14px;
     text-align: center;
     font-weight: 600;
     color: white;
@@ -550,7 +559,7 @@ section {
 
 .card-4 {
     border: 2px grey solid;
-    width: 17%;
+    width: 300px;
     margin: 0px 20px;
     height: 450px;
 }
@@ -592,6 +601,8 @@ section {
 .but-about {
     font-size: 18px;
     letter-spacing: 1px;
+    text-decoration: none;
+
     padding: 12px 25px;
     position: absolute;
     top: 300px;
@@ -602,7 +613,7 @@ section {
     animation-name: rev-scale;
     animation-fill-mode: forwards;
     background: linear-gradient(to left, transparent 50%, #B40A1B 50%) right;
-    background-size: 210%;
+    background-size: 200%;
 }
 
 .but-about:hover {
@@ -612,8 +623,8 @@ section {
 
 .but-about > a {
     background-color: none;
-    position: relative;
-    top: 2px;
+    color: white;
+
 }
 
 
@@ -708,6 +719,33 @@ section {
 .serv-img {
     background-position: center;
     background-size: cover;
+}
+
+.but-service {
+    font-size: 24px;
+    letter-spacing: 1px;
+    text-decoration: none;
+
+    padding: 12px 25px;
+    animation-name: rev-scale;
+    border: none;
+    animation-duration: 1s;
+    transition: all 1s ease;
+    animation-name: rev-scale;
+    animation-fill-mode: forwards;
+    background: linear-gradient(to left, transparent 50%, #B40A1B 50%) right;
+    background-size: 200%;
+}
+
+.but-service:hover {
+    background-position: left;
+    animation-name: scale;
+}
+
+.but-service > a {
+    background-color: none;
+    color: white;
+
 }
 
 /* VLAD's CSS */
