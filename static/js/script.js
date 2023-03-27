@@ -181,7 +181,7 @@ if (document.title == 'ZAVL'){
 
 function proportionImages(){
     images = document.getElementsByClassName('serv-img');
-        size = '60%';
+        size = '70%';
 
     for (let image of images){
         image.style.width = size

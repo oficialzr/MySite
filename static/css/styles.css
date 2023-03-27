@@ -409,7 +409,7 @@ section {
 }
 
 .val-3 {
-    padding-right: 60px;
+    padding-right: 0px;
     padding-top: 30px;
     padding-bottom: 30px;
 }
@@ -424,12 +424,15 @@ section {
 .page-3-un {
     display: flex;
     justify-content: space-evenly;
-    margin: 0px 100px;
+    margin: 0px 50px;
     flex-wrap: wrap;
 }
 
 .page-un {
-    width: 500px
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .page-un-r {
@@ -444,7 +447,7 @@ section {
 }
 
 .iconic {
-    width: 15%;
+    width: 40px;
     height: 56px;
     margin: 5px;
     background: none;
@@ -582,7 +585,6 @@ section {
     font-size: 20px;
     letter-spacing: 1px;
     font-family: 'Montserrat', sans-serif;
-    padding-right: 30px;
 }
 
 .ruby-3 {
@@ -755,10 +757,6 @@ section {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.golf-img-5 {
-    padding-right: 100px;
-}
-
 .item2 {
     position: relative;
     background-image: url('../images/car-5-1.png');
@@ -812,20 +810,23 @@ section {
     margin-left: 50px;
 }
 
-.col-serv > p {
+.text-un-col {
     padding-top: 20px;
-    padding-inline: 15%;
+    padding-inline: 5%;
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
+    color: white;
 }
 
-.col-serv > h3 {
+.title-un-col {
     padding-top: 30px;
     font-size: 40px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: -2px;
     text-transform: uppercase;
+    color: white;
+
 }
 
 .serv-img {
@@ -858,6 +859,29 @@ section {
     background-color: none;
     color: white;
 
+}
+
+/* MEDIA */
+
+
+@media (max-width: 1024px) {
+    .page-un {
+        text-align: center;
+    }
+    .iconic {
+        display: none;
+    }
+    .title-3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .text-un-col {
+        font-size: 14px;
+    }
+    .title-un-col {
+        font-size: 24px;
+    }
 }
 
 /* VLAD's CSS */
