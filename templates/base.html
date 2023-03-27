@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <!-- <link href="media-queries.css" rel="stylesheet" type="text/css"> -->
+
+    <link rel="icon" type="image/x-icon" href="../static/images/icon/favicon.ico">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+    <!-- <title>footer</title>
+    <link rel="stylesheet" href="../css/style.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body {% block body %}{% endblock %}>
+ 
+    <div id="openModal" class="modalDialog">
+        <div>
+            <a href="#close" title="Закрыть" class="close">X</a>
+            <h1 style="text-align: center; color: #B40A1B; font-weight: 600; padding-top: 20px; padding-bottom: 60px;">ZAVL<br>перезвонит!</h1>
+            <form action="" method="post" class="call-form">
+                <div class="call-text">
+                    Как вас зовут?
+                </div>
+                <input name="first_name" class="input-call" type="text" placeholder="Введите ваше имя">
+                <br>
+                <div class="call-text">
+                    Куда нам позвонить?
+                </div>
+                <input name="phone_number" class="input-call" type="text" placeholder="Введите ваш номер телефона">
+                <h6 style="padding-left: 30px; color:dimgray">Пример: +79268882211 / 89268882211</h6>
+                <input class="call-submit" type="submit" value="Отправить!">
+                {% for cat, msg in get_flashed_messages(with_categories=True) %}
+                    <p class="{{cat}}">{{msg}}</p>
+                {% endfor %}
+            </form>
+        </div>
+    </div>
+
+    <main>
+        {% block main %}
+        {% endblock %}
+    </main>
+
+
+{% include '_footer.html' %}
+    <!-- Boostrap scripts -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>    
+    <script src="../static/js/script.js"></script>
+
+</body>
+</html>
