@@ -1,0 +1,280 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    ZAVL
+{% endblock %}
+
+{% block main %}
+    <!-- PAGE 1 -->
+    <section class="page-1">
+        {% include '_navbar.html' %}
+        <div class="darkness">
+            <div class="page-1-over">
+                <div class="zavl _anim-items _anim-no-hide _anim-text-down">
+                    <a>ZAVL TUN</a>
+                </div>
+        
+                <div class="text-center _anim-items _anim-no-hide _anim-text-down">
+                    <img class="ruby" src="../static/images/Rectangle.png">
+                    <img class="ruby" src="../static/images/Rectangle.png">
+                    <img class="ruby" src="../static/images/Rectangle.png">
+                    <img class="ruby" src="../static/images/Rectangle.png">
+                </div>
+        
+                <p class="text-center my-5 sc_he header-font _anim-items _anim-no-hide _anim-text-down">Искусство<br>самовыражения</p>
+
+                <div class="row _anim-items _anim-scale">
+                    <div class="row col-12 text-white p-0 mx-auto">
+                        <div class="col table-val border">
+                            <p class="adr">АДРЕС:</p>
+                            <p class="adr_r">МОСКВА, УЛИЦА ПЛЕХАНОВА, 17С17</p>
+                        </div>
+                        <div class="col table-val border">
+                            <p class="adr">ТЕЛЕФОН:</p>
+                            <p class="adr_r">8 (495) 123-55-55</p>
+                            <p class="adr_r">8-925-123-55-55</p>
+                        </div>
+                        <div class="col table-val border">
+                            <p class="adr">РЕЖИМ РАБОТЫ:</p>
+                            <p class="adr_r">ПН-ПТ : 10:00 - 20:00</p>
+                            <p class="adr_r">СБ-ВС : 12:00 - 20:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE 2 -->
+    <section class="page-2">
+        <div class="pad2 darkness">
+            <div class="page-2-p _anim-items _anim-no-hide _anim-left">
+                <div class="row page-2-title">
+                    <div class="text-center">
+                        <h2 class="main-title">НАШИ ПОКАЗЫ И ВЫСТУПЛЕНИЯ</h2>
+                    </div>
+                </div>
+                <div class="cards-main">
+                    <div class="cart-item" onclick="">
+                        <div class="vagburg car"></div>
+                        <div class="cards text-center">
+                            <h5 class="card_text" style="background-color: #BA2231;">ЕЖЕГОДНЫЙ АВТОМОБИЛЬНЫЙ ФЕСТИВАЛЬ<br>VAGBURG</h5>
+                        </div>
+                    </div>
+                    <div class="cart-item" onclick="">
+                        <div class="japdays car"></div>          
+                        <div class="cards text-center">
+                            <h5 class="card_text" style="background-color: #BA2231;">ФЕСТИВАЛЬ ЯПОНСКИХ АВТОМОБИЛЕЙ<br>JAPDAYS</h5>
+                        </div>                       
+                    </div>
+                    <div class="cart-item" onclick="">
+                        <div class="tunfest car"></div>
+                        <div class="cards text-center">
+                            <h5 class="card_text" style="background-color: #BA2231;">ТЮНИНГ ФЕСТИВАЛЬ TUNING<br>FEST</h5>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE 3 -->
+    <section class="page-3">
+        <div class="pad-3 darkness">
+            <div class="page-3-un">
+                <!-- LEFT -->
+                <div class="page-un _anim-items _anim-no-hide _anim-right">
+                    <div class="val-3">
+                        <div class="title-3">
+                            <div class="iconic">
+                                <img src="../static/images/ico2.png">
+                            </div>
+                            <h2 class="golf-l">МАТЕРИАЛЫ ОТ ЛУЧШИХ КОМПАНИЙ</h2>
+                        </div>
+                        <p class="golf-l-s">Используем только премиальные пленки от премиальных производителей</p>
+                    </div>
+                    <div class="text-center">
+                        <img class="ruby-3" src="../static/images/Rectangle.png">
+                        <img class="ruby-3" src="../static/images/Rectangle.png">
+                        <img class="ruby-3" src="../static/images/Rectangle.png">
+                        <img class="ruby-3" src="../static/images/Rectangle.png">
+                    </div>
+                    <div class="val-3">
+                        <div class="title-3">
+                            <div class="iconic">
+                                <img src="../static/images/ico1.png">
+                            </div>
+                            <h2 class="golf-l">ОПЫТНЫЕ МАСТЕРА</h2>
+                        </div>
+                        <p class="golf-l-s">В нашей компании работают только мастера своего дела, средний стаж работы от 7 лет</p>
+                    </div>
+                    <div class="text-center">
+                        <img class="ruby-3" src="../static/images/Rectangle.png">
+                        <img class="ruby-3" src="../static/images/Rectangle.png">
+                        <img class="ruby-3" src="../static/images/Rectangle.png">
+                        <img class="ruby-3" src="../static/images/Rectangle.png">
+                    </div>
+                    <div class="val-3">
+                        <div class="title-3">
+                            <div class="iconic">
+                                <img src="../static/images/ico3.png">
+                            </div>
+                            <h2 class="golf-l">ГАРАНТИЯ НА ВСЕ ВИДЫ РАБОТЫ</h2>
+                        </div>
+                        <p class="golf-l-s">Мы даем гарантию год на любые наши работы</p>
+                    </div>
+                </div>
+    
+                <!-- RIGHT -->
+                <div class="page-un-r _anim-items _anim-no-hide _anim-left">
+                    <div class="golf-img">
+                        <div id="first" class="item no-point"></div>
+                        <div id="second" class="item no-point"></div>
+                    </div>
+                    <div class="un-golf">
+                        <button id="previous" class="previous" onclick="previousSlide()"><img src="../static/images/but_l.png"></button>
+                        <a class="golf-str">ПОСЛЕДНИЕ РАБОТЫ НА ПРОШЕДШИХ ФЕСТИВАЛЯХ</a>
+                        <button id="next" class="next" onclick="nextSlide()"><img src="../static/images/but_r.png"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE 4 -->
+
+    <section class="page-4">
+        <div class="pad4 darkness dark-4">
+            <div class=" _anim-items _anim-scale-4 _anim-no-hide">
+                <div class="center-content">
+                    <h1 class="main-title main-title-4">НАШИ УСЛУГИ</h1>
+                </div>
+                <div class="center-content">
+                    <img class="ruby ruby-4" src="../static/images/Rectangle.png">
+                    <img class="ruby ruby-4" src="../static/images/Rectangle.png">
+                    <img class="ruby ruby-4" src="../static/images/Rectangle.png">
+                    <img class="ruby ruby-4" src="../static/images/Rectangle.png">
+                </div>
+                <br><br>
+                <div class="center-content">
+                    <div class="cont-but">
+                        <button class="main-title but-4 center-content"><a>ОКЛЕЙКА</a></button>
+                        <button class="main-title but-4 center-content"><a>ДЕТЕЙЛИНГ</a></button>
+                    </div>
+                </div>
+                <div class="center-content wrapped">
+                    <div class="card-4">
+                        <div class="text-white card-4-con">
+                            <div class="ico-4">
+                                <img src="../static/images/ico4.png">
+                            </div>
+                            <a class="main-title card-4-title">ЗАЩИТНЫЕ ПЛЕНКИ</a>
+                            <br>
+                            <a class="main-title card-4-text">ЗАЩИТНЫЕ ПЛЕНКИ ОТ СКОЛОВ, ХИМИЧЕСКИХ РЕАГЕНТОВ И МЕЛКОГО ПЕСКОСТРУЯ</a>
+                            <a class="main-title but-about" href="{{ url_for('services') }}">ПОДРОБНЕЕ</a>
+                        </div>
+                    </div>
+                    <div class="card-4">
+                        <div class="text-white card-4-con">
+                            <div class="ico-4">
+                                <img src="../static/images/ico2.png">
+                            </div>
+                            <a class="main-title card-4-title">Цветные пленки</a>
+                            <br>
+                            <a class="main-title card-4-text">В наличие как полиуретановые, так и виниловые пленки всех цветов. матовые, зеркальные, хамелеон, карбоновые и камуфляжные</a>
+                            <a class="main-title but-about" href="{{ url_for('services') }}">ПОДРОБНЕЕ</a>
+                        </div>
+                    </div>
+                    <div class="card-4">
+                        <div class="text-white card-4-con">
+                            <div class="ico-4">
+                                <img src="../static/images/ico1.png">
+                            </div>
+                            <a class="main-title card-4-title">Дизайн</a>
+                            <br>
+                            <a class="main-title card-4-text">Создадаем индивидуальный стиль под каждого клиента. индивидуальная работа</a>
+                            <a class="main-title but-about" href="{{ url_for('services') }}">ПОДРОБНЕЕ</a>
+                        </div>
+                    </div>
+                    <div class="card-4">
+                        <div class="text-white card-4-con">
+                            <div class="ico-4">
+                                <img src="../static/images/ico3.png">
+                            </div>
+                            <a class="main-title card-4-title">Оклейка салона</a>
+                            <br>
+                            <a class="main-title card-4-text">защита экстерьера и интерьера от потертостей (дверные ручки, центральные консоли, пластиковые накладки и детали салона)</a>
+                            <a class="main-title but-about" href="{{ url_for('services') }}">ПОДРОБНЕЕ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE 5 -->
+    <section class="page-3 page-5">
+        <div class="pad5 dark-5">
+            <div class="page-3-un">
+                <!-- LEFT -->
+                <div class="page-un-r _anim-items _anim-no-hide _anim-right">
+                    <div class="golf-img">
+                        <div id="first2" class="item2 no-point"></div>
+                        <div id="second2" class="item2 no-point"></div>
+                    </div>
+                    <div class="un-golf">
+                        <button id="previous2" class="previous" onclick="previousSlide2()"><img src="../static/images/but_l.png"></button>
+                        <a class="golf-str">ПОСЛЕДНИЕ РАБОТЫ НА ПРОШЕДШИХ ФЕСТИВАЛЯХ</a>
+                        <button id="next2" class="next" onclick="nextSlide2()"><img src="../static/images/but_r.png"></button>
+                    </div>
+                </div>
+    
+                <!-- RIGHT -->
+                <div class="page-un _anim-items _anim-no-hide _anim-left">
+                    <div class="val-3">
+                        <div class="title-3">
+                            <div class="iconic">
+                                <img src="../static/images/ico4.png">
+                            </div>
+                            <h2 class="golf-l">ПОЛИРОЛЬ ВЫСШЕГО КАЧЕСТВА</h2>
+                        </div>
+                        <p class="golf-l-s">Только высококачественные полироли для Ваших кузовов</p>
+                    </div>
+                    <div class="text-center">
+                        <img class="ruby-3" src="../static/images/Rectangle.png">
+                        <img class="ruby-3" src="../static/images/Rectangle.png">
+                        <img class="ruby-3" src="../static/images/Rectangle.png">
+                        <img class="ruby-3" src="../static/images/Rectangle.png">
+                    </div>
+                    <div class="val-3">
+                        <div class="title-3">
+                            <div class="iconic">
+                                <img src="../static/images/ico2.png">
+                            </div>
+                            <h2 class="golf-l">ЧЕТКОЕ ВЫПОЛНЕНИЕ<br>РАБОТЫ ПО ТЗ</h2>
+                        </div>
+                        <p class="golf-l-s">Мы слышим своих клиентов и работаем только для удовлетворения их потребностей</p>
+                    </div>
+                    <div class="text-center">
+                        <img class="ruby-3" src="../static/images/Rectangle.png">
+                        <img class="ruby-3" src="../static/images/Rectangle.png">
+                        <img class="ruby-3" src="../static/images/Rectangle.png">
+                        <img class="ruby-3" src="../static/images/Rectangle.png">
+                    </div>
+                    <div class="val-3">
+                        <div class="title-3">
+                            <div class="iconic">
+                                <img src="../static/images/ico1.png">
+                            </div>
+                            <h2 class="golf-l">У НАС ЛУЧШИЕ МАСТЕРА</h2>
+                        </div>
+                        <p class="golf-l-s">В нашей команде только профессионалы своего дела</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VLADS CONTENT -->
+
+{% endblock %}
