@@ -24,16 +24,21 @@
         <div>
             <a href="#close" title="Закрыть" class="close">X</a>
             <h1 style="text-align: center; color: #B40A1B; font-weight: 600; padding-top: 20px; padding-bottom: 60px;">ZAVL<br>перезвонит!</h1>
-            <form class="call-form">
+            <form action="" method="post" class="call-form">
                 <div class="call-text">
                     Как вас зовут?
                 </div>
-                <input class="input-call" type="text" placeholder="Введите ваше имя">
+                <input name="first_name" class="input-call" type="text" placeholder="Введите ваше имя">
+                <br>
                 <div class="call-text">
                     Куда нам позвонить?
                 </div>
-                <input class="input-call" type="text" placeholder="Введите ваш номер телефона">
-                <button class="call-submit" type="submit">Отправить!</button>
+                <input name="phone_number" class="input-call" type="text" placeholder="Введите ваш номер телефона">
+                <h6 style="padding-left: 30px; color:dimgray">Пример: +79268882211 / 89268882211</h6>
+                <input class="call-submit" type="submit" value="Отправить!">
+                {% for cat, msg in get_flashed_messages(with_categories=True) %}
+                    <p class="{{cat}}">{{msg}}</p>
+                {% endfor %}
             </form>
         </div>
     </div>

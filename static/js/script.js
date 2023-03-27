@@ -207,3 +207,8 @@ window.addEventListener('resize', function(event) {
 
 imagesServ()
 proportionImages()
+
+
+if ( window.history.replaceState ) {
+    window.history.replaceState( null, null, window.location.href );
+}

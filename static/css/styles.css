@@ -91,6 +91,8 @@ section {
     flex-wrap: wrap;
 }
 
+/* MODAL WINDOW */
+
 .modalDialog {
     position: fixed;
     font-family: Arial, Helvetica, sans-serif;
@@ -108,7 +110,7 @@ section {
 .modalDialog:target {
     display: block;
     pointer-events: auto;
-    animation: modal-opacity 1s linear 1;
+    animation: modal-opacity 0.5s linear 1;
 }
 
 @keyframes modal-opacity {
@@ -122,8 +124,8 @@ section {
 .modalDialog > div {
     width: 600px;
     position: relative;
-    margin: 10% auto;
-    padding: 20px;
+    margin: 5% auto;
+    padding: 0px;
     border-radius: 20px;
     background: #101010;
     color: white;
@@ -187,6 +189,17 @@ section {
     font-size: 24px
 }
 
+.warning {
+    text-align: center;
+    color: red;
+    font-size: 28px;
+}
+
+.accept {
+    text-align: center;
+    color:lawngreen;
+    font-size: 28px;
+}
     
 
 
