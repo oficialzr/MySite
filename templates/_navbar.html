@@ -1,12 +1,30 @@
 <nav class="navbar-m" id="navbar">
+    <div class="navbar-position">
+        <button id="button-nav" type="button" onclick="navbarRight()" class="up-button disabled-but">
+            <span class="material-symbols-outlined menu-button">menu</span>
+        </button>
+        <div class="center-content" style="width: 90%; height: 100%;">
+            <div id="navbar-main-mobile" class="navbar-main-mobile _anim-left-mobile _anim-no-hide">
+                <a href='{{ url_for("index") }}' class="header-font nav-title navbar-mobile">
+                    Главная
+                </a>
+                <a href='{{ url_for("services") }}' class="header-font nav-title navbar-mobile">
+                    Наши услуги
+                </a>
+                <a href='#' class="header-font nav-title navbar-mobile">
+                    Галерея работ
+                </a>
+            </div>
+        </div>
+    </div>
     <div class="navbar-main _anim-items _anim-no-hide _anim-text-up">
-        <a href='{{ url_for("index") }}' class="header-font nav-title" style="margin-inline: 20px;">
+        <a href='{{ url_for("index") }}' class="header-font nav-title">
             Главная
         </a>
-        <a href='{{ url_for("services") }}' class="header-font nav-title" style="margin-inline: 20px;">
+        <a href='{{ url_for("services") }}' class="header-font nav-title">
             Наши услуги
         </a>
-        <a href='#' class="header-font nav-title" style="margin-inline: 20px;">
+        <a href='#' class="header-font nav-title">
             Галерея работ
         </a>
     </div>

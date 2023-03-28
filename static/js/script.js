@@ -212,3 +212,30 @@ proportionImages()
 if ( window.history.replaceState ) {
     window.history.replaceState( null, null, window.location.href );
 }
+
+function navbarRight() {
+    button = document.getElementById('button-nav')
+    if ('active-but' == button.classList[1]) {
+        button.classList.remove('active-but')
+        button.classList.add('disabled-but')
+
+        navbar = document.getElementsByClassName('navbar-mobile')
+        nav = document.getElementById('navbar-main-mobile')
+        nav.classList.remove('_anim-left')
+        nav.classList.remove('_active')
+        nav.classList.add('_anim-mobile-del')
+        nav.classList.add('_active')
+    } else {
+        button.classList.remove('disabled-but')
+        button.classList.add('active-but')
+        navbar = document.getElementsByClassName('navbar-mobile')
+        for (let item of navbar) {
+            item.style.display = "block";
+        }
+        nav = document.getElementById('navbar-main-mobile')
+        nav.classList.remove('_anim-mobile-del')
+        nav.classList.remove('_active')
+        nav.classList.add('_anim-left')
+        nav.classList.add('_active')
+    }
+}
